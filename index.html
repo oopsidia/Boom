@@ -1,63 +1,157 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
 
-  <title>BOOM!</title>
+<meta charset="UTF-8" />
 
-  <link rel="stylesheet" href="style.css" />
+<meta
+  name="viewport"
+  content="
+    width=device-width,
+    initial-scale=1.0,
+    maximum-scale=1.0,
+    user-scalable=no
+  "
+/>
+
+<title>BOOM!</title>
+
+<link
+  rel="stylesheet"
+  href="style.css"
+/>
+
 </head>
 
 <body>
 
-<div id="onboarding" class="screen">
+<!-- 온보딩 -->
+
+<div id="onboarding">
+
+  <div class="hero">
+
+    <div class="logo">
+      💥 BOOM!
+    </div>
+
+    <div class="subtitle">
+      지금 가려는 곳,<br>
+      얼마나 BOOM빌까?
+    </div>
+
+  </div>
 
   <div class="card">
 
-    <h1>💥 BOOM!</h1>
+    <div class="question">
+      성별
+    </div>
 
-    <p>
-      내가 가려는 곳,
-      얼마나 BOOM빌까?
-    </p>
+    <div class="chips" id="genderGroup">
 
-    <select id="age">
-      <option>20대</option>
-      <option>30대</option>
-      <option>40대</option>
-    </select>
+      <button class="chip selected">
+        남성
+      </button>
 
-    <select id="purpose">
-      <option>데이트</option>
-      <option>친구와 놀기</option>
-      <option>혼자 나들이</option>
-      <option>가족 외출</option>
-    </select>
+      <button class="chip">
+        여성
+      </button>
+
+    </div>
+
+    <div class="question">
+      나이대
+    </div>
+
+    <div class="chips" id="ageGroup">
+
+      <button class="chip selected">
+        20대
+      </button>
+
+      <button class="chip">
+        30대
+      </button>
+
+      <button class="chip">
+        40대+
+      </button>
+
+    </div>
+
+    <div class="question">
+      외출 목적
+    </div>
+
+    <div class="chips" id="purposeGroup">
+
+      <button class="chip selected">
+        데이트
+      </button>
+
+      <button class="chip">
+        친구와 놀기
+      </button>
+
+      <button class="chip">
+        혼자 나들이
+      </button>
+
+      <button class="chip">
+        가족 외출
+      </button>
+
+    </div>
+
+    <div class="question">
+      관심 있는 것 (선택)
+    </div>
+
+    <div class="chips" id="interestGroup">
+
+      <button class="chip">
+        맛집
+      </button>
+
+      <button class="chip">
+        팝업스토어
+      </button>
+
+      <button class="chip">
+        사진스팟
+      </button>
+
+      <button class="chip">
+        조용한 카페
+      </button>
+
+    </div>
 
     <button id="startBtn">
-      시작하기
+      BOOM 시작하기
     </button>
 
   </div>
+
 </div>
+
+<!-- 채팅 -->
 
 <div id="chatScreen" class="hidden">
 
-  <div class="header">
+  <div class="topbar">
     💥 BOOM!
   </div>
 
   <div id="chat"></div>
 
-  <div class="input-area">
+  <div class="inputWrap">
 
     <input
       id="input"
-      placeholder="어디 가볼까?"
+      placeholder="성수 오늘 어때?"
+      autocomplete="off"
     />
 
     <button id="send">
