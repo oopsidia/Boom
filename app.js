@@ -94,22 +94,22 @@ async function sendMessage() {
 
   try {
 
-    const response = await fetch(
-      "https://boom-ai.sh031300.workers.dev",
-      {
-        method: "POST",
+const response = await fetch(
+  "https://YOUR-WORKER.workers.dev",
+  {
+    method: "POST",
 
-        headers: {
-          "Content-Type":
-            "application/json"
-        },
+    headers: {
+      "Content-Type":
+        "application/json"
+    },
 
-        body: JSON.stringify({
-          message: text,
-          profile
-        })
-      }
-    );
+    body: JSON.stringify({
+      message: text,
+      profile
+    })
+  }
+);
 
     const data =
       await response.json();
