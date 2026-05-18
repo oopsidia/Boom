@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
   <title>BOOM!</title>
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<div class="app">
+<div id="onboarding" class="screen">
+
+  <div class="card">
+
+    <h1>💥 BOOM!</h1>
+
+    <p>
+      내가 가려는 곳,
+      얼마나 BOOM빌까?
+    </p>
+
+    <select id="age">
+      <option>20대</option>
+      <option>30대</option>
+      <option>40대</option>
+    </select>
+
+    <select id="purpose">
+      <option>데이트</option>
+      <option>친구와 놀기</option>
+      <option>혼자 나들이</option>
+      <option>가족 외출</option>
+    </select>
+
+    <button id="startBtn">
+      시작하기
+    </button>
+
+  </div>
+</div>
+
+<div id="chatScreen" class="hidden">
 
   <div class="header">
     💥 BOOM!
@@ -16,8 +54,16 @@
   <div id="chat"></div>
 
   <div class="input-area">
-    <input id="input" placeholder="어디 가볼까?" />
-    <button id="send">전송</button>
+
+    <input
+      id="input"
+      placeholder="어디 가볼까?"
+    />
+
+    <button id="send">
+      전송
+    </button>
+
   </div>
 
 </div>
