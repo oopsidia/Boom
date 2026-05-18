@@ -57,7 +57,7 @@ async function sendMessage() {
   try {
 
     const response = await fetch(
-      "https://YOUR-WORKER.workers.dev",
+      "https://boom-ai.sh031300.workers.dev",
       {
         method: "POST",
 
