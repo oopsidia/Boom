@@ -15,7 +15,7 @@ async function sendMessage() {
   const botDiv = addMessage("", "bot");
 
   const response = await fetch(
-    "https://YOUR-WORKER.workers.dev",
+    "boom-ai.sh031300.workers.dev",
     {
       method: "POST",
       headers: {
