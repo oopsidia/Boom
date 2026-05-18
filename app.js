@@ -1,3 +1,26 @@
+document
+  .querySelectorAll(".chips")
+  .forEach(group => {
+
+    group
+      .querySelectorAll(".chip")
+      .forEach(chip => {
+
+        chip.addEventListener(
+          "click",
+          () => {
+
+            group
+              .querySelectorAll(".chip")
+              .forEach(c =>
+                c.classList.remove("selected")
+              );
+
+            chip.classList.add("selected");
+          }
+        );
+      });
+  });
 const onboarding =
   document.getElementById("onboarding");
 
@@ -18,11 +41,26 @@ let profile = {};
 startBtn.addEventListener("click", () => {
 
   profile = {
+
+    gender:
+      document.querySelector(
+        "#genderGroup .selected"
+      ).innerText,
+
     age:
-      document.getElementById("age").value,
+      document.querySelector(
+        "#ageGroup .selected"
+      ).innerText,
 
     purpose:
-      document.getElementById("purpose").value
+      document.querySelector(
+        "#purposeGroup .selected"
+      ).innerText,
+
+    interest:
+      document.querySelector(
+        "#interestGroup .selected"
+      )?.innerText || ""
   };
 
   onboarding.classList.add("hidden");
@@ -110,11 +148,13 @@ function addMessage(text, role) {
 
 async function typeText(el, text) {
 
+  el.textContent = "";
+
   for (let i = 0; i < text.length; i++) {
 
-    el.innerHTML += text[i];
+    el.textContent += text[i];
 
-    await delay(18);
+    await delay(16);
 
     chat.scrollTop =
       chat.scrollHeight;
